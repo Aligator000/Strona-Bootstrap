@@ -1,8 +1,279 @@
-.grey {
-  background-color: grey;
+body {
+  margin-top: 0;
 }
 
-.white {
-  background-color: white;
+#parent {
+  font-family: "Montserrat", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px 1fr;
+      grid-template-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px 1fr;
+  grid-template-areas: "banner banner banner" "service1 service2 service3" "sale1 sale2 sale3" "portfolio1 portfolio2 portfolio3" "ph1 ph2 ph3" "ph4 ph5 ph6" "footer footer footer";
+}
+
+#blank {
+  grid-row: ph1-start / ph6-end;
+  grid-column: ph1-start / ph6-end;
+  z-index: -1;
+  background-color: #D5EDED !important;
+}
+
+#nav {
+  grid-area: banner;
+  color: white;
+  font-size: 1.2em;
+  padding-right: 50px;
+}
+
+#banner {
+  grid-area: banner;
+  background-image: url("https://i.postimg.cc/8zfXkSJC/elvis-presley-1482026-1920.jpg");
+  background-size: cover;
+  background-position: center, center;
+  position: relative;
+  z-index: -10;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+#banner p {
+  font-family: "Lobster", cursive;
+  color: gold;
+  margin-top: 130px;
+  font-size: 2em;
+}
+
+#banner h1 {
+  margin-top: 30px;
+  color: white;
+  font-size: 3em;
+}
+
+#overlay {
+  position: absolute;
+  background: rgba(20, 20, 20, 0.7);
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+}
+
+button {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  height: 80px;
+  width: 180px;
+  background-color: gold;
+  border: 0;
+  margin-top: 50px;
+}
+
+#service2 {
+  grid-area: service2;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#service2 p {
+  text-align: center;
+}
+
+#sale1 {
+  grid-area: sale1;
+  padding: 10px 15px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#sale1 p {
+  text-align: center;
+}
+
+#sale1 .fa {
+  font-size: 40px;
+  color: gold;
+}
+
+#sale2 {
+  grid-area: sale2;
+  padding: 10px 15px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#sale2 p {
+  text-align: center;
+}
+
+#sale2 .fa {
+  font-size: 40px;
+  color: gold;
+}
+
+#sale3 {
+  grid-area: sale3;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  display: block;
+  text-align: center;
+}
+
+#sale3 p {
+  text-align: center;
+}
+
+#sale3 .fa {
+  font-size: 40px;
+  color: gold;
+}
+
+#portfolio2 {
+  grid-area: portfolio2;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #D5EDED;
+}
+
+#portfolio1 {
+  grid-area: portfolio1;
+  background-color: #D5EDED;
+}
+
+#portfolio3 {
+  grid-area: portfolio3;
+  background-color: #D5EDED;
+}
+
+#ph1 {
+  grid-area: ph1;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ph1 p {
+  text-align: center;
+}
+
+#ph2 {
+  grid-area: ph2;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ph2 p {
+  text-align: center;
+}
+
+#ph3 {
+  grid-area: ph3;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ph3 p {
+  text-align: center;
+}
+
+#ph4 {
+  grid-area: ph4;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ph4 p {
+  text-align: center;
+}
+
+#ph5 {
+  grid-area: ph5;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ph5 p {
+  text-align: center;
+}
+
+#ph6 {
+  grid-area: ph6;
+  padding: 0 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#ph6 p {
+  text-align: center;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}
+
+#nav ul {
+  list-style-type: none;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+#nav ul li.menu {
+  float: right;
+  padding: 0 10px;
+}
+
+#nav ul .logo {
+  float: left;
+  font-family: "Lobster", cursive;
+  color: gold;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+#footer ul {
+  list-style-type: none;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+#footer ul li.social {
+  float: right;
+  padding: 0 5px;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+#footer ul li.logo {
+  float: left;
 }
 /*# sourceMappingURL=style.css.map */
