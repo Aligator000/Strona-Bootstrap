@@ -1,5 +1,5 @@
 body {
-  margin-top: 0;
+  margin: -8px;
 }
 
 #parent {
@@ -8,8 +8,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px 1fr;
-      grid-template-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px 1fr;
+  -ms-grid-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px;
+      grid-template-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px;
   grid-template-areas: "banner banner banner" "service1 service2 service3" "sale1 sale2 sale3" "portfolio1 portfolio2 portfolio3" "ph1 ph2 ph3" "ph4 ph5 ph6" "footer footer footer";
 }
 

@@ -2,14 +2,14 @@ $font-one: 'Montserrat', sans-serif;
 $font-two: "Lobster", cursive;
 
 body{
-    margin-top: 0;
+    margin: -8px;
 }
 
 #parent {
     font-family: $font-one;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr 2fr 2fr 50px;
     grid-template-areas:    "banner banner banner"
                             "service1 service2 service3"
                             "sale1 sale2 sale3"
@@ -270,22 +270,21 @@ img {
   
 }
 
-#footer{
+#footer {
     grid-area: footer;
 }
 
-#footer ul{
+#footer ul {
     list-style-type: none;
     flex-direction: row;
     
-    li.social{
+    li.social {
         float: right;
         padding: 0 5px;
         justify-content: center;
     }
 
-    li.logo{
+    li.logo {
         float: left;
     }
 }
-
