@@ -138,7 +138,7 @@ button{
 #sale3{
     grid-area: sale3;
     padding: 10px 15px;
-    margin-bottom: 30px;
+    margin: 0 auto;
     display: block;
     text-align: center; 
 
@@ -151,7 +151,6 @@ button{
         color: gold;
     }
 }
-
 
 
 #portfolio2 {
@@ -182,7 +181,6 @@ button{
     p {
         text-align: center;
     }
-
 }
 
 #ph2 {
@@ -266,8 +264,6 @@ img {
         font-family: $font-two;
         color: gold;
     }
-
-  
 }
 
 #footer {
@@ -286,5 +282,38 @@ img {
 
     li.logo {
         float: left;
+    }
+}
+@media screen and (max-width: 768px){
+
+    #parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 200px 200px 200px 200px 200px 400px 400px 400px 50px;
+        grid-template-areas:    "banner"
+                                "service2"
+                                "sale1"
+                                "sale2"
+                                "sale3"
+                                "portfolio2"
+                                "ph4" 
+                                "ph2"
+                                "ph3"
+                                "footer";
+    }
+
+
+
+    #ph1, #ph5, #ph6 {
+        display: none;
+    }
+
+    #portfolio2{
+        background-color: white;
+
+    }
+
+    #nav {
+       font-size: 0.8em;
     }
 }

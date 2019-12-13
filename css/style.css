@@ -130,7 +130,7 @@ button {
 #sale3 {
   grid-area: sale3;
   padding: 10px 15px;
-  margin-bottom: 30px;
+  margin: 0 auto;
   display: block;
   text-align: center;
 }
@@ -275,5 +275,26 @@ img {
 
 #footer ul li.logo {
   float: left;
+}
+
+@media screen and (max-width: 768px) {
+  #parent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 2fr 200px 200px 200px 200px 200px 400px 400px 400px 50px;
+        grid-template-rows: 2fr 200px 200px 200px 200px 200px 400px 400px 400px 50px;
+    grid-template-areas: "banner" "service2" "sale1" "sale2" "sale3" "portfolio2" "ph4"  "ph2" "ph3" "footer";
+  }
+  #ph1, #ph5, #ph6 {
+    display: none;
+  }
+  #portfolio2 {
+    background-color: white;
+  }
+  #nav {
+    font-size: 0.8em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
